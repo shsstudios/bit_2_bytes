@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Bit2Bytes.iml" filepath="$PROJECT_DIR$/Bit2Bytes.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bit_2_bytes.iml" filepath="$PROJECT_DIR$/bit_2_bytes.iml" />
     </modules>
   </component>
 </project>
