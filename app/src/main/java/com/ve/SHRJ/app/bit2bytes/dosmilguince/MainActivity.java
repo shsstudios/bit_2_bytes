@@ -47,8 +47,9 @@ public class MainActivity extends AppCompatActivity {
     public void convertir(View view)
     {
         descarga.setText(String.valueOf(Float.parseFloat(megabits.getText().toString()) * (15625/128) ));
+        descarga.setText(String.valueOf(Float.parseFloat(megabits.getText().toString()) * (15625/128) ));
     }
 
-
+    //hola soy Rafael
 
 }
