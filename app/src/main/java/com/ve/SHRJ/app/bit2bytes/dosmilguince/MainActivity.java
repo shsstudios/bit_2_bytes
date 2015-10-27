@@ -46,8 +46,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void convertir(View view)
     {
-        //soy Said
-        descarga.setText(String.valueOf(Float.parseFloat(megabits.getText().toString()) * (15625/128) ));
+        if ((Float.parseFloat(megabits.getText().toString()) ) >= 8.192)
+            {
+                descarga.setText(String.valueOf(Float.parseFloat(megabits.getText().toString()) / 8) + " MB/s" );
+            }
+            else
+                {
+                    descarga.setText(String.valueOf(Float.parseFloat(megabits.getText().toString()) * 125) + " KB/s");
+                }
     }
 
 
