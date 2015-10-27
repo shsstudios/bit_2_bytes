@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Bit 2 Bytes</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="action_convertir">Convert</string>
+
+    <string name="hint_megabits">Your ISP download speed connection in MBPS</string>
+
+    <string name="hint_descarga">Your real download speed</string>
+</resources>
