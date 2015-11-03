@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     {
         if ((Float.parseFloat(megabits.getText().toString()) ) >= 8.388608)
             {
-                descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * (15625/131072)) + " MB/s");
+                descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * 15625/131072) + " MB/s");
             }
             else
                 {
