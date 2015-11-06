@@ -59,9 +59,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onKeyUp(int codigoTecla, KeyEvent evento) {
+    public boolean onKeyUp(int codigoTecla, KeyEvent evento)
+    {
         super.onKeyUp(codigoTecla, evento);
-        // Suponemos que vamos a procesar la pulsación
+
         boolean procesada = true;
 
         descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * (15625/128)) + " KB/s");

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="action_convertir">Convertir</string>
-    <string name="hint_megabits">Tu plan de internet en MBPS</string>
-    <string name="hint_descarga">Tu velocidad real de descarga</string>
+
+
+    <string name="hint_megabits">Cantidad numérica</string>
+    <string name="hint_descarga">Resultado</string>
 </resources>
