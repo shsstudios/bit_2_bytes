@@ -7,27 +7,6 @@
     android:orientation="vertical"
     android:weightSum="1">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/megabits"
-        android:hint="@string/hint_megabits"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:textSize="13sp"
-        android:textIsSelectable="false" />
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:spinnerMode="dropdown"
-        android:layout_below="@+id/megabits"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,8 +15,45 @@
         android:id="@+id/descarga"
         android:hint="@string/hint_descarga"
         android:gravity="center"
-        android:layout_below="@+id/spinner"
+        android:layout_marginTop="74dp"
+        android:layout_below="@+id/tableLayout"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textSize="50sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tableLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/megabits"
+                android:hint="@string/hint_megabits"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textIsSelectable="false"
+                android:layout_column="1" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:spinnerMode="dropdown"
+                android:layout_column="2"
+                android:layout_span="0"
+                android:layout_weight="0" />
+        </TableRow>
+
+    </TableLayout>
 
 </RelativeLayout>
