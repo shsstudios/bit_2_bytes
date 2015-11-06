@@ -2,9 +2,11 @@ package com.ve.SHRJ.app.bit2bytes.dosmilguince;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -55,6 +57,18 @@ public class MainActivity extends AppCompatActivity {
                     descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * (15625/128)) + " KB/s");
                 }
     }
+
+    @Override
+    public boolean onKeyUp(int codigoTecla, KeyEvent evento) {
+        super.onKeyUp(codigoTecla, evento);
+        // Suponemos que vamos a procesar la pulsación
+        boolean procesada = true;
+
+        descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * (15625/128)) + " KB/s");
+
+        return procesada;
+    }
+
 
 
 
