@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         String BitSelected = tipoBits.getSelectedItem().toString();
         double P=0;
+        double U=0;
         double N = Float.parseFloat(megabits.getText().toString());
 
     switch(BitSelected)
