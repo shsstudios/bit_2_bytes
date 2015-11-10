@@ -114,6 +114,17 @@ public class MainActivity extends AppCompatActivity {
         case Yottabits: P = 24; break;
     }*/
 //////FIN DE P/////////////////////////////////////////////////////
+      /// if (N < 8,192){
+    //  descarga.setText(String.valueOf(N*10^P*2^-10P/3+10/8))
+    // }
+
+    /// if (N >= 8,192){
+      //  descarga.setText(String.valueOf(N*10^P*2^-10P/3/8))
+    // }
+
+    /// if (N >= 1048576/125){
+    //  descarga.setText(String.valueOf(N*10^P*2^-10P/3-10/8))
+    // }
 
     ///////////////////////////////////////////////////////////////////
 }
