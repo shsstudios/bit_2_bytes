@@ -12,16 +12,16 @@
 
     <!-- Conjunto de Strings para el View BitSpinner -->
     <string-array name="ArrayBits">
-        <item>Byte</item>
-        <item>Kilobyte</item>
-        <item>Megabyte</item>
-        <item>Gigabyte</item>
-        <item>Terabyte</item>
-        <item>Petabyte</item>
-        <item>Exabyte</item>
-        <item>ZettaByte</item>
-        <item>YottaByte</item>
-        <item>Xerabyte</item>
-    </string-array>
+        <item>Bits</item>
+        <item>Kilobits</item>
+        <item>Megabits</item>
+        <item>Gigabits</item>
+        <item>Terabits</item>
+        <item>Petabits</item>
+        <item>Exabits</item>
+        <item>Zettabits</item>
+        <item>Yottabits</item>
+        <!--  <item>Xerabits</item>-->
+     </string-array>
 
-</resources>
+ </resources>

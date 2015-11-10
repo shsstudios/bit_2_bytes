@@ -99,38 +99,23 @@ public class MainActivity extends AppCompatActivity {
     ///fin de N///////////////////////
 
     //P en texto = megabits.getText().toString()
-           private  String TipoBits = megabits.getText().toString();
 
-           private double P ;
+    private String BitSelected= megabits.getText().toString();
 
-                switch (TipoBits) {
-                    case Byte:  P = 0;
-                        break;
-                    case 2:  monthString = "February";
-                        break;
-                    case 3:  monthString = "March";
-                        break;
-                    case 4:  monthString = "April";
-                        break;
-                    case 5:  monthString = "May";
-                        break;
-                    case 6:  monthString = "June";
-                        break;
-                    case 7:  monthString = "July";
-                        break;
-                    case 8:  monthString = "August";
-                        break;
-                    case 9:  monthString = "September";
-                        break;
-                    case 10: monthString = "October";
-                        break;
-                    case 11: monthString = "November";
-                        break;
-                    case 12: monthString = "December";
-                        break;
-                    default: monthString = "Invalid month";
-                        break;
-                }
+    private double P ;
+
+    switch(BitSelected)
+    {
+        case Bits: P = 0; break;
+        case Kilobits: P = 3; break;
+        case Megabits: P = 6; break;
+        case Gigabits: P = 9; break;
+        case Terabits: P = 12; break;
+        case Petabits: P = 15; break;
+        case Exabits: P = 18; break;
+        case Zettabits: P = 21; break;
+        case Yottabits: P = 24; break;
+    }
 //////FIN DE P/////////////////////////////////////////////////////
 
     ///////////////////////////////////////////////////////////////////

@@ -16,6 +16,6 @@
         <item>Exabits</item>
         <item>Zettabits</item>
         <item>Yottabits</item>
-        <item>Xerabits</item>
+        <!--  <item>Xerabits</item>-->
     </string-array>
 </resources>
