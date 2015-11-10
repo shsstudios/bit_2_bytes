@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
 
-            DecimalFormat formateador = new DecimalFormat("#.##");
+            DecimalFormat formateador = new DecimalFormat("#.###");
 
             if (N < 8.192) {
                 descarga.setText(String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) + 10))) / 8)));
