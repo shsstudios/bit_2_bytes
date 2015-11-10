@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             DecimalFormat formateador = new DecimalFormat("#.###");
 
             if (N < 8.192 && P == 0) {
-                descarga.setText(String.valueOf(formateador.format(N / 8)));
+                descarga.setText(String.valueOf(formateador.format(N / 8)));// no funca
             }
 
             if (N < 8.192) {
