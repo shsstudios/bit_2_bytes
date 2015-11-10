@@ -94,13 +94,10 @@ public class MainActivity extends AppCompatActivity {
     ///////////////////////////////////////////////////////////////////
 
     //N = Float.parseFloat(megabits.getText().toString())
-
-
     ///fin de N///////////////////////
 
     //P en texto = megabits.getText().toString()
-
-    private String BitSelected= megabits.getText().toString();
+   /* private String BitSelected= megabits.getText().toString();
 
     private double P ;
 
@@ -115,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         case Exabits: P = 18; break;
         case Zettabits: P = 21; break;
         case Yottabits: P = 24; break;
-    }
+    }*/
 //////FIN DE P/////////////////////////////////////////////////////
 
     ///////////////////////////////////////////////////////////////////
