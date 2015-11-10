@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int codigoTecla, KeyEvent evento)
     {
-        super.onKeyUp(codigoTecla, evento);
+        super.onKeyDown(codigoTecla, evento);
 
         boolean procesada = true;
 
