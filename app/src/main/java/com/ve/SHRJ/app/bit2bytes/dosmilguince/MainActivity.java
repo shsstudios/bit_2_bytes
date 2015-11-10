@@ -52,17 +52,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-   /* public void convertir(View view)
-    {
-        if ((Float.parseFloat(megabits.getText().toString()) ) >= 8.388608)
-            {
-                descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * 15625/131072) + " MB/s");
-            }
-            else
-                {
-                    descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * (15625/128)) + " KB/s");
-                }
-    }*/
 
     @Override
     public boolean onKeyDown(int codigoTecla, KeyEvent evento)
@@ -73,14 +62,51 @@ public class MainActivity extends AppCompatActivity {
 
        //ponertodo
 
-        /////////
+        String BitSelected = tipoBits.getSelectedItem().toString();
+        double P;
+        double N = Float.parseFloat(megabits.getText().toString());
+
+    switch(BitSelected)
+    {
+        case "Bits": P = 0; break;
+        case "Kilobits": P = 3; break;
+        case "Megabits": P = 6; break;
+        case "Gigabits": P = 9; break;
+        case "Terabits": P = 12; break;
+        case "Petabits": P = 15; break;
+        case "Exabits": P = 18; break;
+        case "Zettabits": P = 21; break;
+        case "Yottabits": P = 24; break;
+    }
+
+         if (N < 8.192){
+          descarga.setText(String.valueOf(N*10^P*2^-10P/3+10/8));
+         }
+
+         if (N < 1048576/125 && N >= 8.192){
+         descarga.setText(String.valueOf(N*10^P*2^-10P/3/8));
+         }
+
+         if (N >= 1048576/125){
+          descarga.setText(String.valueOf(N*10^P*2^-10P/3-10/8));
+         }
 
         return procesada;
 
-
-
     }
 
+
+      /* public void convertir(View view)
+    {
+        if ((Float.parseFloat(megabits.getText().toString()) ) >= 8.388608)
+            {
+                descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * 15625/131072) + " MB/s");
+            }
+            else
+                {
+                    descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * (15625/128)) + " KB/s");
+                }
+    }*/
 
     // descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * (15625/128)) + " KB/s");
     // descarga.setText(tipoBits.getSelectedItem().toString());
