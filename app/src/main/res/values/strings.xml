@@ -21,7 +21,7 @@
         <item>Exabyte</item>
         <item>ZettaByte</item>
         <item>YottaByte</item>
-        <!-- <item>Xerabyte</item> -->
-     </string-array>
+        <item>Xerabyte</item>
+    </string-array>
 
- </resources>
+</resources>
