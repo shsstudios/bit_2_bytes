@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText megabits;
     private TextView descarga;
+    private Spinner tipoBits;
     //protected ArrayAdapter<CharSequence> adapter;
 
     @Override
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         megabits = (EditText) findViewById(R.id.megabits);
         descarga = (TextView)  findViewById(R.id.descarga);
+        tipoBits = (Spinner) findViewById(R.id.Bitspinner);
         //Spinner Bitspinner = (Spinner) findViewById(R.id.Bitspinner);
     }
 
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void convertir(View view)
+   /* public void convertir(View view)
     {
         if ((Float.parseFloat(megabits.getText().toString()) ) >= 8.388608)
             {
@@ -60,24 +62,73 @@ public class MainActivity extends AppCompatActivity {
                 {
                     descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * (15625/128)) + " KB/s");
                 }
-    }
+    }*/
 
     @Override
-    public boolean onKeyUp(int codigoTecla, KeyEvent evento)
+    public boolean onKeyDown(int codigoTecla, KeyEvent evento)
     {
         super.onKeyUp(codigoTecla, evento);
 
         boolean procesada = true;
 
-        descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * (15625/128)) + " KB/s");
+       //ponertodo
+
+        /////////
 
         return procesada;
     }
 
 
+    // descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * (15625/128)) + " KB/s");
+    // descarga.setText(tipoBits.getSelectedItem().toString());
+    //tipoBits.toString();
+
+       /* if (((megabits.getText().toString())) == null)
+        {
+            descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * 15625/131072) + " MB/s");
+        }*/
+
+    ///////////////////////////////////////////////////////////////////
+
+    //N = Float.parseFloat(megabits.getText().toString())
 
 
+    ///fin de N///////////////////////
 
+    //P en texto = megabits.getText().toString()
+           private  String TipoBits = megabits.getText().toString();
 
+           private double P ;
 
+                switch (TipoBits) {
+                    case Byte:  P = 0;
+                        break;
+                    case 2:  monthString = "February";
+                        break;
+                    case 3:  monthString = "March";
+                        break;
+                    case 4:  monthString = "April";
+                        break;
+                    case 5:  monthString = "May";
+                        break;
+                    case 6:  monthString = "June";
+                        break;
+                    case 7:  monthString = "July";
+                        break;
+                    case 8:  monthString = "August";
+                        break;
+                    case 9:  monthString = "September";
+                        break;
+                    case 10: monthString = "October";
+                        break;
+                    case 11: monthString = "November";
+                        break;
+                    case 12: monthString = "December";
+                        break;
+                    default: monthString = "Invalid month";
+                        break;
+                }
+//////FIN DE P/////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////
 }
