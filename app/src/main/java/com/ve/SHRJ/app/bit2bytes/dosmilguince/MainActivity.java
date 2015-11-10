@@ -72,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
         descarga.setText(String.valueOf((Float.parseFloat(megabits.getText().toString())) * (15625/128)) + " KB/s");
 
         return procesada;
+
+
+
     }
 
 
