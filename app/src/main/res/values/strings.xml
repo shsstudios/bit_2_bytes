@@ -7,6 +7,21 @@
 
 
     <string name="hint_megabits">Number cuantity</string>
-
     <string name="hint_descarga">Result</string>
+
+
+    <!-- Conjunto de Strings para el View BitSpinner -->
+    <string-array name="ArrayBits">
+        <item>Byte</item>
+        <item>Kilobyte</item>
+        <item>Megabyte</item>
+        <item>Gigabyte</item>
+        <item>Terabyte</item>
+        <item>Petabyte</item>
+        <item>Exabyte</item>
+        <item>ZettaByte</item>
+        <item>YottaByte</item>
+        <item>Xerabyte</item>
+    </string-array>
+
 </resources>

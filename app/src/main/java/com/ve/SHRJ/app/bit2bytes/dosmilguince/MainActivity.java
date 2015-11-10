@@ -7,13 +7,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText megabits;
     private TextView descarga;
+    //protected ArrayAdapter<CharSequence> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         megabits = (EditText) findViewById(R.id.megabits);
         descarga = (TextView)  findViewById(R.id.descarga);
+        //Spinner Bitspinner = (Spinner) findViewById(R.id.Bitspinner);
     }
 
     @Override
