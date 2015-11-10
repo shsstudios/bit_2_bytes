@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
        //ponertodo
 
         String BitSelected = tipoBits.getSelectedItem().toString();
-        double P;
+        double P=0;
         double N = Float.parseFloat(megabits.getText().toString());
 
     switch(BitSelected)
@@ -80,15 +80,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
          if (N < 8.192){
-          descarga.setText(String.valueOf(N*10^P*2^-10P/3+10/8));
+          descarga.setText(String.valueOf((N*(Math.pow(10,P))*(Math.pow(2,(-10*P/3)+10)))/8));
          }
 
          if (N < 1048576/125 && N >= 8.192){
-         descarga.setText(String.valueOf(N*10^P*2^-10P/3/8));
+         descarga.setText(String.valueOf((N*(Math.pow(10,P))*(Math.pow(2,-10*P/3)))/8));
          }
 
          if (N >= 1048576/125){
-          descarga.setText(String.valueOf(N*10^P*2^-10P/3-10/8));
+          descarga.setText(String.valueOf((N*(Math.pow(10,P))*(Math.pow(2,(-10*P/3)-10)))/8));
          }
 
         return procesada;
