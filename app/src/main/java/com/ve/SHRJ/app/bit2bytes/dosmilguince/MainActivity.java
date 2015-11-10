@@ -60,8 +60,7 @@ public class MainActivity extends AppCompatActivity {
         boolean procesada = true;
 
         //ponertodo
-        if (megabits.getText().toString() != null)
-
+        if (!(megabits.getText().toString().isEmpty()))
         {
             String BitSelected = tipoBits.getSelectedItem().toString();
             double P = 0;
@@ -112,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+         else
+            {
+                descarga.setText("");
+            }
         return procesada;
 
     }
