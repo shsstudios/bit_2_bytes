@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -96,16 +97,18 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
 
+            DecimalFormat formateador = new DecimalFormat("#.##");
+
             if (N < 8.192) {
-                descarga.setText(String.valueOf((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) + 10))) / 8));
+                descarga.setText(formateador.format(String.valueOf((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) + 10))) / 8)));
             }
 
             if (N < 1048576 / 125 && N >= 8.192) {
-                descarga.setText(String.valueOf((N * (Math.pow(10, P)) * (Math.pow(2, -10 * P / 3))) / 8));
+                descarga.setText(formateador.format(String.valueOf((N * (Math.pow(10, P)) * (Math.pow(2, -10 * P / 3))) / 8)));
             }
 
             if (N >= 1048576 / 125) {
-                descarga.setText(String.valueOf((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) - 10))) / 8));
+                descarga.setText(formateador.format(String.valueOf((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) - 10))) / 8)));
             }
 
 
