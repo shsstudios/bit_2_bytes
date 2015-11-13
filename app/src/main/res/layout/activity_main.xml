@@ -7,20 +7,6 @@
     android:orientation="vertical"
     android:weightSum="1">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/hint_descarga"
-        android:id="@+id/descarga"
-        android:hint="@string/hint_descarga"
-        android:gravity="center"
-        android:layout_marginTop="24dp"
-        android:layout_below="@+id/tableLayout"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="50sp" />
-
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,6 +39,59 @@
                 android:layout_span="0"
                 android:layout_weight="0"
                 android:entries="@array/ArrayBits" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/hint_descarga"
+                android:id="@+id/descarga"
+                android:hint="@string/hint_descarga"
+                android:gravity="center"
+                android:textSize="50sp"
+                android:layout_column="1"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="1 Byte = 8 Bits"
+                android:id="@+id/textView"
+                android:layout_column="1"
+                android:layout_span="2"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="1024 Bytes = 1 Kilobyte"
+                android:id="@+id/textView2"
+                android:layout_column="1"
+                android:layout_span="2"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20sp" />
         </TableRow>
 
     </TableLayout>
