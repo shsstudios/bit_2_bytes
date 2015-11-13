@@ -100,12 +100,16 @@ public class MainActivity extends AppCompatActivity {
             DecimalFormat formateador = new DecimalFormat("#.###");
 
             if (N < 8.192 && P == 0) {
-                descarga.setText(String.valueOf(formateador.format(N / 8)));// no funca
+                descarga.setText(String.valueOf(formateador.format(N / 8)));
             }
+             else if(N < 8.192)
+                {
+                    descarga.setText(String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) + 10))) / 8)));
+                }
 
-            if (N < 8.192) {
-                descarga.setText(String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) + 10))) / 8)));
-            }
+            //if (N < 8.192) {
+              //  descarga.setText(String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) + 10))) / 8)));
+           // }
 
             if (N < 1048576 / 125 && N >= 8.192) {
                 descarga.setText(String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, -10 * P / 3))) / 8)));
