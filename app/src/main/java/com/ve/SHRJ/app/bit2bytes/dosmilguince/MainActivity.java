@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         if (!(megabits.getText().toString().isEmpty()))
         {
             String BitSelected = tipoBits.getSelectedItem().toString();
-            double P = 0;
+            int P = 0;
             double N = Float.parseFloat(megabits.getText().toString());
 
             switch (BitSelected) {
@@ -97,29 +97,38 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
 
-            DecimalFormat formateador = new DecimalFormat("#.###");
+            DecimalFormat formateador = new DecimalFormat("#.##");
 
-            if (N < 8.192 && P == 0) {
-                descarga.setText(String.valueOf(formateador.format(N / 8)));
+            String SufijoBytes;
+
+            ///////////////////////////////////////
+
+            if (N < 8.192 && P == 0)
+            {
+                String ValorCrudo = String.valueOf(formateador.format(N / 8));
+
+                descarga.setText(ValorCrudo + " " + SufijoBytes(P));
             }
              else if(N < 8.192)
                 {
-                    descarga.setText(String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) + 10))) / 8)));
+                    String ValorCrudo = String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) + 10))) / 8));
+
+                    descarga.setText(ValorCrudo + " " + SufijoBytes(P - 3));
                 }
 
-            //if (N < 8.192) {
-              //  descarga.setText(String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) + 10))) / 8)));
-           // }
+            if (N < 1048576 / 125 && N >= 8.192)
+            {
+                String ValorCrudo = String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, -10 * P / 3))) / 8));
 
-            if (N < 1048576 / 125 && N >= 8.192) {
-                descarga.setText(String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, -10 * P / 3))) / 8)));
+                descarga.setText(ValorCrudo + " " + SufijoBytes(P));
             }
 
-            if (N >= 1048576 / 125) {
-                descarga.setText(String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) - 10))) / 8)));
+            if (N >= 1048576 / 125)
+            {
+                String ValorCrudo = String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) - 10))) / 8));
+
+                descarga.setText(ValorCrudo + " " + SufijoBytes(P + 3));
             }
-
-
 
         }
          else
@@ -128,6 +137,47 @@ public class MainActivity extends AppCompatActivity {
             }
         return procesada;
 
+    }
+
+    String SufijoBytes(int valorp)
+    {
+        String Sufijo="";
+
+        switch (valorp) {
+            case  0:
+                Sufijo = "Bytes";
+                break;
+            case  3:
+                Sufijo = "KB";
+                break;
+            case 6:
+                Sufijo = "MB";
+                break;
+            case 9:
+                Sufijo = "GB";
+                break;
+            case 12:
+                Sufijo = "TB";
+                break;
+            case 15:
+                Sufijo = "PB";
+                break;
+            case 18:
+                Sufijo = "EB";
+                break;
+            case 21:
+                Sufijo = "ZB";
+                break;
+            case 24:
+                Sufijo = "YB";
+                break;
+            default:
+                Sufijo = "YB";
+                break;
+
+        }
+
+        return Sufijo;
     }
 
 }
