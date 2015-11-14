@@ -1,5 +1,6 @@
 package com.ve.SHRJ.app.bit2bytes.dosmilguince;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -7,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -18,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText megabits;
     private TextView descarga;
     private Spinner tipoBits;
-    //protected ArrayAdapter<CharSequence> adapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         megabits = (EditText) findViewById(R.id.megabits);
         descarga = (TextView)  findViewById(R.id.descarga);
         tipoBits = (Spinner) findViewById(R.id.Bitspinner);
-        //Spinner Bitspinner = (Spinner) findViewById(R.id.Bitspinner);
+
+
     }
 
     @Override
@@ -60,6 +64,34 @@ public class MainActivity extends AppCompatActivity {
 
         boolean procesada = true;
 
+            Bit2Bytes();
+
+        return procesada;
+
+    }
+
+
+    public class SpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
+
+
+        public void onItemSelected(AdapterView<?> parent, View view, int pos, long id)
+        {
+            // An item was selected. You can retrieve the selected item using
+            // parent.getItemAtPosition(pos)
+
+                Bit2Bytes();
+
+        }
+
+        public void onNothingSelected(AdapterView<?> parent)
+        {
+            // Another interface callback
+        }
+    }
+
+    //Funcion que calcula los Bits a Bytes
+    void Bit2Bytes()
+    {
         //ponertodo
         if (!(megabits.getText().toString().isEmpty()))
         {
@@ -109,12 +141,12 @@ public class MainActivity extends AppCompatActivity {
 
                 descarga.setText(ValorCrudo + " " + SufijoBytes(P));
             }
-             else if(N < 8.192)
-                {
-                    String ValorCrudo = String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) + 10))) / 8));
+            else if(N < 8.192)
+            {
+                String ValorCrudo = String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) + 10))) / 8));
 
-                    descarga.setText(ValorCrudo + " " + SufijoBytes(P - 3));
-                }
+                descarga.setText(ValorCrudo + " " + SufijoBytes(P - 3));
+            }
 
             if (N < 1048576 / 125 && N >= 8.192)
             {
@@ -131,14 +163,13 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-         else
-            {
-                descarga.setText("");
-            }
-        return procesada;
-
+        else
+        {
+            descarga.setText("");
+        }
     }
 
+    //Funcion q devuelve el sufijo correspondiente a la cantidad calculada
     String SufijoBytes(int valorp)
     {
         String Sufijo="";
