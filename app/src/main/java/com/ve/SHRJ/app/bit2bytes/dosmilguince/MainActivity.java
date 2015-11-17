@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             // An item was selected. You can retrieve the selected item using
             // parent.getItemAtPosition(pos)
 
-                Bit2Bytes();
+                Bit2Bytes() ;
 
         }
 
