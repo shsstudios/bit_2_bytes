@@ -79,13 +79,14 @@ public class MainActivity extends AppCompatActivity {
             // An item was selected. You can retrieve the selected item using
             // parent.getItemAtPosition(pos)
 
-                Bit2Bytes() ;
+            descarga.setText("jalapeño");
 
         }
 
         public void onNothingSelected(AdapterView<?> parent)
         {
-            // Another interface callback
+            descarga.setText("pica pica");
+
         }
     }
 
