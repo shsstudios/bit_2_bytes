@@ -33,6 +33,17 @@ public class MainActivity extends AppCompatActivity {
         tipoBits = (Spinner) findViewById(R.id.Bitspinner);
 
 
+        tipoBits.setOnItemSelectedListener(
+                new AdapterView.OnItemSelectedListener() {
+                    public void onItemSelected(
+                            AdapterView<?> parent, View view, int position, long id) {
+                        Bit2Bytes();
+                    }
+
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        descarga.setText("SHS studios");
+                    }
+                });
     }
 
     @Override
@@ -70,25 +81,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-    public class SpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
-
-
-        public void onItemSelected(AdapterView<?> parent, View view, int pos, long id)
-        {
-            // An item was selected. You can retrieve the selected item using
-            // parent.getItemAtPosition(pos)
-
-            descarga.setText("jalapeño");
-
-        }
-
-        public void onNothingSelected(AdapterView<?> parent)
-        {
-            descarga.setText("pica pica");
-
-        }
-    }
 
     //Funcion que calcula los Bits a Bytes
     void Bit2Bytes()
