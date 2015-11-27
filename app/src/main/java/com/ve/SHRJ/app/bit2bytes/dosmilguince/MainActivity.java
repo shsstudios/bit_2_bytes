@@ -1,18 +1,21 @@
 package com.ve.SHRJ.app.bit2bytes.dosmilguince;
 
-import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +23,11 @@ public class MainActivity extends AppCompatActivity {
     private EditText megabits;
     private TextView descarga;
     private Spinner tipoBits;
-
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
 
     @Override
@@ -29,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         megabits = (EditText) findViewById(R.id.megabits);
-        descarga = (TextView)  findViewById(R.id.descarga);
+        descarga = (TextView) findViewById(R.id.descarga);
         tipoBits = (Spinner) findViewById(R.id.Bitspinner);
 
 
@@ -46,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
                         descarga.setText("SHS studios");
                     }
                 });
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     @Override
@@ -77,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
         boolean procesada = true;
 
-            Bit2Bytes();
+        Bit2Bytes();
 
         return procesada;
 
@@ -85,11 +95,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Funcion que calcula los Bits a Bytes
-    void Bit2Bytes()
-    {
+    void Bit2Bytes() {
         //ponertodo
-        if (!(megabits.getText().toString().isEmpty()))
-        {
+        if (!(megabits.getText().toString().isEmpty())) {
             String BitSelected = tipoBits.getSelectedItem().toString();
             int P = 0;
             double N = Float.parseFloat(megabits.getText().toString());
@@ -130,50 +138,42 @@ public class MainActivity extends AppCompatActivity {
 
             ///////////////////////////////////////
 
-            if (N < 8.192 && P == 0)
-            {
+            if (N < 8.192 && P == 0) {
                 String ValorCrudo = String.valueOf(formateador.format(N / 8));
 
                 descarga.setText(ValorCrudo + " " + SufijoBytes(P));
-            }
-            else if(N < 8.192)
-            {
+            } else if (N < 8.192) {
                 String ValorCrudo = String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) + 10))) / 8));
 
                 descarga.setText(ValorCrudo + " " + SufijoBytes(P - 3));
             }
 
-            if (N < 1048576 / 125 && N >= 8.192)
-            {
+            if (N < 1048576 / 125 && N >= 8.192) {
                 String ValorCrudo = String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, -10 * P / 3))) / 8));
 
                 descarga.setText(ValorCrudo + " " + SufijoBytes(P));
             }
 
-            if (N >= 1048576 / 125)
-            {
+            if (N >= 1048576 / 125) {
                 String ValorCrudo = String.valueOf(formateador.format((N * (Math.pow(10, P)) * (Math.pow(2, (-10 * P / 3) - 10))) / 8));
 
                 descarga.setText(ValorCrudo + " " + SufijoBytes(P + 3));
             }
 
-        }
-        else
-        {
+        } else {
             descarga.setText("");
         }
     }
 
     //Funcion q devuelve el sufijo correspondiente a la cantidad calculada
-    String SufijoBytes(int valorp)
-    {
-        String Sufijo="";
+    String SufijoBytes(int valorp) {
+        String Sufijo;
 
         switch (valorp) {
-            case  0:
+            case 0:
                 Sufijo = "Bytes";
                 break;
-            case  3:
+            case 3:
                 Sufijo = "KB";
                 break;
             case 6:
@@ -206,4 +206,43 @@ public class MainActivity extends AppCompatActivity {
         return Sufijo;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "Main Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app deep link URI is correct.
+                Uri.parse("android-app://com.ve.SHRJ.app.bit2bytes.dosmilguince/http/host/path")
+        );
+        AppIndex.AppIndexApi.start(client, viewAction);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "Main Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app deep link URI is correct.
+                Uri.parse("android-app://com.ve.SHRJ.app.bit2bytes.dosmilguince/http/host/path")
+        );
+        AppIndex.AppIndexApi.end(client, viewAction);
+        client.disconnect();
+    }
 }
