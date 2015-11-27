@@ -34,13 +34,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         tipoBits.setOnItemSelectedListener(
-                new AdapterView.OnItemSelectedListener() {
-                    public void onItemSelected(
-                            AdapterView<?> parent, View view, int position, long id) {
+                new AdapterView.OnItemSelectedListener()
+                {
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+                    {
                         Bit2Bytes();
                     }
 
-                    public void onNothingSelected(AdapterView<?> parent) {
+                    public void onNothingSelected(AdapterView<?> parent)
+                    {
                         descarga.setText("SHS studios");
                     }
                 });
@@ -124,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
             DecimalFormat formateador = new DecimalFormat("#.##");
 
-            String SufijoBytes;
+            //String SufijoBytes;
 
             ///////////////////////////////////////
 
