@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.appnext.appnextinterstitial.InterstitialManager;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -34,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //intersticial publicidad appnext
+        InterstitialManager.showInterstitial(this, "41cce7c0-86ba-4a18-b189-51cee3d91185", InterstitialManager.INTERSTITIAL_VIDEO);
+        InterstitialManager.cacheInterstitial(MainActivity.this, "41cce7c0-86ba-4a18-b189-51cee3d91185", InterstitialManager.INTERSTITIAL_VIDEO);
+        ///////////////
+
 
         megabits = (EditText) findViewById(R.id.megabits);
         descarga = (TextView) findViewById(R.id.descarga);
@@ -86,7 +93,8 @@ public class MainActivity extends AppCompatActivity {
         super.onKeyUp(codigoTecla, evento);
 
         boolean procesada = true;
-
+       // InterstitialManager.cacheInterstitial(MainActivity.this, "41cce7c0-86ba-4a18-b189-51cee3d91185", InterstitialManager.INTERSTITIAL_VIDEO);
+        //InterstitialManager.showInterstitial(this, "41cce7c0-86ba-4a18-b189-51cee3d91185", InterstitialManager.INTERSTITIAL_VIDEO);
         Bit2Bytes();
 
         return procesada;
