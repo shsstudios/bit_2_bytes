@@ -7,95 +7,79 @@
     android:orientation="vertical"
     android:weightSum="1">
 
-    <TableLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:id="@+id/megabits"
+        android:hint="@string/hint_megabits"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textIsSelectable="false"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/instruccion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:maxLength="7"
+        android:maxLines="1" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Bitspinner"
+        android:spinnerMode="dropdown"
+        android:entries="@array/ArrayBits"
+        android:layout_gravity="center"
+        android:layout_alignTop="@+id/megabits"
+        android:layout_above="@+id/descarga"
+        android:layout_toRightOf="@+id/megabits"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/hint_descarga"
+        android:id="@+id/descarga"
+        android:hint="@string/hint_descarga"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:layout_below="@+id/megabits"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/hint_instruccion"
+        android:id="@+id/instruccion"
+        android:layout_marginTop="24dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/tableLayout">
+        android:hint="@string/hint_instruccion"
+        android:layout_alignParentEnd="false" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/hint_igualdad_1"
+        android:id="@+id/igualdad_1"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/descarga"
+        android:layout_centerHorizontal="true" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:id="@+id/megabits"
-                android:hint="@string/hint_megabits"
-                android:gravity="center"
-                android:textSize="18sp"
-                android:textIsSelectable="false"
-                android:layout_column="1" />
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/Bitspinner"
-                android:spinnerMode="dropdown"
-                android:layout_column="2"
-                android:layout_span="0"
-                android:layout_weight="0"
-                android:entries="@array/ArrayBits" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/hint_descarga"
-                android:id="@+id/descarga"
-                android:hint="@string/hint_descarga"
-                android:gravity="center"
-                android:textSize="50sp"
-                android:layout_column="1"
-                android:layout_marginTop="20sp"
-                android:layout_marginBottom="20sp"
-                android:layout_span="2" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="1 Byte = 8 Bits"
-                android:id="@+id/textView"
-                android:layout_column="1"
-                android:layout_span="2"
-                android:textAlignment="center"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="1024 Bytes = 1 Kilobyte"
-                android:id="@+id/textView2"
-                android:layout_column="1"
-                android:layout_span="2"
-                android:textAlignment="center"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20sp" />
-        </TableRow>
-
-    </TableLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/hint_igualdad_2"
+        android:id="@+id/igualdad_2"
+        android:layout_below="@+id/igualdad_1"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"

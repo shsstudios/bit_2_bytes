@@ -87,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     @Override
     public boolean onKeyUp(int codigoTecla, KeyEvent evento) {
         super.onKeyUp(codigoTecla, evento);
@@ -101,8 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-    //Funcion que calcula los Bits a Bytes
+    //Función que convierte la cantidad en Bits a Bytes
     void Bit2Bytes() {
         //ponertodo
         if (!(megabits.getText().toString().isEmpty())) {
@@ -173,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //Funcion q devuelve el sufijo correspondiente a la cantidad calculada
+    //Función que devuelve el sufijo correspondiente a la cantidad calculada
     String SufijoBytes(int valorp) {
         String Sufijo;
 

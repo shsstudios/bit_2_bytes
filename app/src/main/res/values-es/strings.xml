@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-
-    <string name="hint_megabits">Cantidad numérica</string>
+    <string name="app_name">Bit 2 Bytes</string>
+    <string name="action_settings">Configuración</string>
+    <string name="hint_megabits">Cantidad de bits</string>
     <string name="hint_descarga">Resultado</string>
+    <string name="hint_instruccion">Inserta en bits, obtén en bytes!</string>
+    <string name="hint_igualdad_1">8 bits = 1 byte</string>
+    <string name="hint_igualdad_2">1024 bytes = 1 kilobyte</string>
 
     <!-- Conjunto de Strings para el View BitSpinner -->
     <string-array name="ArrayBits">
@@ -15,7 +18,8 @@
         <item>Petabits</item>
         <item>Exabits</item>
         <item>Zettabits</item>
-        <item>Yottabits</item>
+        <!--  <item>Yottabits</item>-->
         <!--  <item>Xerabits</item>-->
     </string-array>
+
 </resources>

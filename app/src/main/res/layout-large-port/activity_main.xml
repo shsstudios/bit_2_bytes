@@ -16,8 +16,44 @@
 
         <TableRow
             android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="1 Byte = 8 Bits"
+                android:id="@+id/textView"
+                android:layout_column="1"
+                android:layout_span="2"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="1024 Bytes = 1 Kilobyte"
+                android:id="@+id/textView2"
+                android:layout_column="1"
+                android:layout_span="2"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp">
 
             <EditText
                 android:layout_width="match_parent"
@@ -59,41 +95,6 @@
                 android:layout_marginTop="20sp"
                 android:layout_marginBottom="20sp"
                 android:layout_span="2" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="1 Byte = 8 Bits"
-                android:id="@+id/textView"
-                android:layout_column="1"
-                android:layout_span="2"
-                android:textAlignment="center"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="1024 Bytes = 1 Kilobyte"
-                android:id="@+id/textView2"
-                android:layout_column="1"
-                android:layout_span="2"
-                android:textAlignment="center"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20sp" />
         </TableRow>
 
     </TableLayout>
