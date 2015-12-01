@@ -16,6 +16,7 @@ import com.appnext.appnextinterstitial.InterstitialManager;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.purplebrain.adbuddiz.sdk.AdBuddiz;
 
 import java.text.DecimalFormat;
 
@@ -40,7 +41,11 @@ public class MainActivity extends AppCompatActivity {
         InterstitialManager.showInterstitial(this, "41cce7c0-86ba-4a18-b189-51cee3d91185", InterstitialManager.INTERSTITIAL_VIDEO);
         InterstitialManager.cacheInterstitial(MainActivity.this, "41cce7c0-86ba-4a18-b189-51cee3d91185", InterstitialManager.INTERSTITIAL_VIDEO);
         ///////////////
-
+        //intersticial publicidad Adbuddiz
+        AdBuddiz.setPublisherKey("TEST_PUBLISHER_KEY");
+        /////////////////////////////////
+        ////////////////////////////////
+        ///////////////////////////////
 
         megabits = (EditText) findViewById(R.id.megabits);
         descarga = (TextView) findViewById(R.id.descarga);

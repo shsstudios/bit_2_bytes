@@ -32,6 +32,9 @@
             android:hardwareAccelerated="true" />
         <service android:name="com.appnext.appnextinterstitial.DownloadService"/>
 
+        <activity android:name="com.purplebrain.adbuddiz.sdk.AdBuddizActivity"
+            android:theme="@android:style/Theme.Translucent" />
+
     </application>
 
 
