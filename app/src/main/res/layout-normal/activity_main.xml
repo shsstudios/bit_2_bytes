@@ -21,7 +21,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="false"
         android:maxLength="7"
-        android:maxLines="1" />
+        android:maxLines="1"
+        android:layout_toLeftOf="@+id/Bitspinner"
+        android:layout_toStartOf="@+id/Bitspinner" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -32,10 +34,10 @@
         android:layout_gravity="center"
         android:layout_alignTop="@+id/megabits"
         android:layout_above="@+id/descarga"
-        android:layout_toRightOf="@+id/megabits"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="false" />
+        android:layout_toRightOf="@+id/igualdad_1"
+        android:layout_toEndOf="@+id/igualdad_1" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,15 +82,6 @@
         android:id="@+id/igualdad_2"
         android:layout_below="@+id/igualdad_1"
         android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button2"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/tableLayout"
-        android:layout_alignEnd="@+id/tableLayout" />
 
 </RelativeLayout>
 
