@@ -92,8 +92,7 @@ public class MainActivity extends AppCompatActivity {
         super.onKeyUp(codigoTecla, evento);
 
         boolean procesada = true;
-       // InterstitialManager.cacheInterstitial(MainActivity.this, "41cce7c0-86ba-4a18-b189-51cee3d91185", InterstitialManager.INTERSTITIAL_VIDEO);
-        //InterstitialManager.showInterstitial(this, "41cce7c0-86ba-4a18-b189-51cee3d91185", InterstitialManager.INTERSTITIAL_VIDEO);
+
         Bit2Bytes();
 
         return procesada;
