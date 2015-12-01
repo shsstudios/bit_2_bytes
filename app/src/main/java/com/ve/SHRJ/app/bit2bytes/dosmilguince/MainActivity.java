@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         ///////////////
         //intersticial publicidad Adbuddiz
         AdBuddiz.setPublisherKey("TEST_PUBLISHER_KEY");
+        AdBuddiz.cacheAds(this); // this = current Activity
+        AdBuddiz.showAd(this); // this = current Activity
         /////////////////////////////////
         ////////////////////////////////
         ///////////////////////////////
