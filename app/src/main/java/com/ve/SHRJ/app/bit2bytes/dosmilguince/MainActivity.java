@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //intersticial publicidad appnext
-        InterstitialManager.showInterstitial(this, "41cce7c0-86ba-4a18-b189-51cee3d91185", InterstitialManager.INTERSTITIAL_VIDEO);
-        InterstitialManager.cacheInterstitial(MainActivity.this, "41cce7c0-86ba-4a18-b189-51cee3d91185", InterstitialManager.INTERSTITIAL_VIDEO);
+       // InterstitialManager.showInterstitial(this, "41cce7c0-86ba-4a18-b189-51cee3d91185", InterstitialManager.INTERSTITIAL_VIDEO);
+       // InterstitialManager.cacheInterstitial(MainActivity.this, "41cce7c0-86ba-4a18-b189-51cee3d91185", InterstitialManager.INTERSTITIAL_VIDEO);
         ///////////////
         //intersticial publicidad Adbuddiz
         AdBuddiz.setPublisherKey("TEST_PUBLISHER_KEY");
