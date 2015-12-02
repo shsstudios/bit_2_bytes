@@ -5,7 +5,9 @@
     <string name="hint_descarga">Result</string>
     <string name="hint_instruccion">Insert in bits, get it in bytes!</string>
     <string name="hint_igualdad_1">8 bits = 1 byte</string>
-    <string name="hint_igualdad_2">1024 bytes = 1 kilobyte</string>
+    <string name="hint_igualdad_2">8 kilobits = 1000 bytes</string>
+    <string name="hint_igualdad_3">1024 bytes = 1 kilobyte</string>
+    <string name="hint_igualdad_4">1024 kilobytes = 1 megabyte</string>
 
     <!-- Conjunto de Strings para el View BitSpinner -->
     <string-array name="ArrayBits">

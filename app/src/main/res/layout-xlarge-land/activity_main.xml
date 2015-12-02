@@ -7,6 +7,21 @@
     android:orientation="vertical"
     android:weightSum="1">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/hint_instruccion"
+        android:id="@+id/instruccion"
+        android:layout_marginTop="60dp"
+        android:hint="@string/hint_instruccion"
+        android:textStyle="bold"
+        android:textSize="27sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="50dp" />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,14 +31,14 @@
         android:gravity="center"
         android:textSize="36sp"
         android:textIsSelectable="false"
-        android:layout_marginTop="48sp"
-        android:layout_below="@+id/instruccion"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
         android:maxLength="7"
         android:maxLines="1"
-        android:layout_toLeftOf="@+id/bitspinner"
-        android:layout_toStartOf="@+id/bitspinner" />
+        android:layout_below="@+id/instruccion"
+        android:layout_alignLeft="@+id/instruccion"
+        android:layout_alignStart="@+id/instruccion"
+        android:layout_marginTop="60sp"
+        android:layout_alignRight="@+id/instruccion"
+        android:layout_alignEnd="@+id/instruccion" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -32,12 +47,12 @@
         android:spinnerMode="dropdown"
         android:entries="@array/ArrayBits"
         android:layout_gravity="center"
-        android:layout_alignTop="@+id/megabits"
-        android:layout_above="@+id/descarga"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/igualdad_1"
-        android:layout_toEndOf="@+id/igualdad_1" />
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/megabits"
+        android:layout_alignLeft="@+id/megabits"
+        android:layout_alignStart="@+id/megabits"
+        android:layout_alignRight="@+id/megabits"
+        android:layout_alignEnd="@+id/megabits" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,23 +63,8 @@
         android:hint="@string/hint_descarga"
         android:gravity="center"
         android:textSize="75sp"
-        android:layout_below="@+id/megabits"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/hint_instruccion"
-        android:id="@+id/instruccion"
-        android:layout_marginTop="48sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:hint="@string/hint_instruccion"
-        android:layout_alignParentEnd="false"
-        android:textStyle="bold"
-        android:textSize="24sp" />
+        android:layout_alignTop="@+id/megabits"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,11 +72,12 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/hint_igualdad_1"
         android:id="@+id/igualdad_1"
-        android:layout_below="@+id/descarga"
-        android:layout_marginTop="48sp"
-        android:layout_centerHorizontal="true"
         android:textStyle="italic"
-        android:textSize="18sp" />
+        android:textSize="24sp"
+        android:layout_alignTop="@+id/instruccion"
+        android:layout_marginRight="50sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -84,11 +85,12 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/hint_igualdad_2"
         android:id="@+id/igualdad_2"
-        android:layout_below="@+id/igualdad_1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16sp"
         android:textStyle="italic"
-        android:textSize="18sp" />
+        android:textSize="24sp"
+        android:layout_below="@+id/igualdad_1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50sp"
+        android:layout_marginTop="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -96,11 +98,12 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/hint_igualdad_3"
         android:id="@+id/igualdad_3"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/igualdad_2"
-        android:layout_marginTop="16sp"
         android:textStyle="italic"
-        android:textSize="18sp" />
+        android:textSize="24sp"
+        android:layout_below="@+id/igualdad_2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50sp"
+        android:layout_marginTop="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -108,10 +111,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/hint_igualdad_4"
         android:id="@+id/igualdad_4"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/igualdad_3"
-        android:layout_marginTop="16sp"
         android:textStyle="italic"
-        android:textSize="18sp" />
+        android:textSize="24sp"
+        android:layout_below="@+id/igualdad_3"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50sp"
+        android:layout_marginTop="30sp" />
 
 </RelativeLayout>

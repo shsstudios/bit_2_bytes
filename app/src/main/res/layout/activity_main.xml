@@ -16,19 +16,19 @@
         android:gravity="center"
         android:textSize="24sp"
         android:textIsSelectable="false"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="24sp"
         android:layout_below="@+id/instruccion"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="false"
         android:maxLength="7"
         android:maxLines="1"
-        android:layout_toLeftOf="@+id/Bitspinner"
-        android:layout_toStartOf="@+id/Bitspinner" />
+        android:layout_toLeftOf="@+id/bitspinner"
+        android:layout_toStartOf="@+id/bitspinner" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Bitspinner"
+        android:id="@+id/bitspinner"
         android:spinnerMode="dropdown"
         android:entries="@array/ArrayBits"
         android:layout_gravity="center"
@@ -50,7 +50,7 @@
         android:textSize="50sp"
         android:layout_below="@+id/megabits"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="24sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -58,11 +58,12 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/hint_instruccion"
         android:id="@+id/instruccion"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="24sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:hint="@string/hint_instruccion"
-        android:layout_alignParentEnd="false" />
+        android:layout_alignParentEnd="false"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,9 +71,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/hint_igualdad_1"
         android:id="@+id/igualdad_1"
-        android:layout_marginTop="24sp"
         android:layout_below="@+id/descarga"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="24sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="italic" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,30 +82,31 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/hint_igualdad_2"
         android:id="@+id/igualdad_2"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/descarga"
-        android:layout_alignStart="@+id/descarga"
-        android:layout_marginTop="8sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="1024 kilobytes = 1 megabyte"
-        android:id="@+id/textView"
-        android:layout_below="@+id/igualdad_2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="8 kilobits = 1000 bytes"
-        android:id="@+id/textView2"
         android:layout_below="@+id/igualdad_1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8sp" />
+        android:layout_marginTop="8sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/hint_igualdad_3"
+        android:id="@+id/igualdad_3"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/igualdad_2"
+        android:layout_marginTop="8sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/hint_igualdad_4"
+        android:id="@+id/igualdad_4"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/igualdad_3"
+        android:layout_marginTop="8sp"
+        android:textStyle="italic" />
 
 </RelativeLayout>
-

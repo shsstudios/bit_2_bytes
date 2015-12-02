@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         megabits = (EditText) findViewById(R.id.megabits);
         descarga = (TextView) findViewById(R.id.descarga);
-        tipoBits = (Spinner) findViewById(R.id.Bitspinner);
+        tipoBits = (Spinner) findViewById(R.id.bitspinner);
 
 
         tipoBits.setOnItemSelectedListener(
